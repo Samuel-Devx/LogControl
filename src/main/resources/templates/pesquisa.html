@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisa SKU</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="tableBlock" th:if="${produtoPesquisa}">
+        <h1 class="tlConsulta">Pesquisa SKU</h1>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>SKU</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td th:text="${produtoPesquisa.id}"></td>
+                        <td th:text="${produtoPesquisa.nome}"></td>
+                        <td th:text="${produtoPesquisa.sku}"></td>
+                        <td th:text="${produtoPesquisa.preco}"></td>
+                        <td th:text="${produtoPesquisa.quantidade}"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <a href="/abrirPesquisa">
+        <button><i class="fa-solid fa-magnifying-glass"></i>Voltar Pesquisa</button>
+    </a>
+</body>
+</html>

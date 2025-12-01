@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Deletar Produto</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1 class="tlDelet">Deletar Produto</h1>
+    <form th:action="@{/deletarSku}" method="post">
+        <input type="text" id="deletarProduto" name="sku" required placeholder="Digite o SKU do produto..." >
+        <button type="submit">
+             <i class="fa-solid fa-trash"></i> Deletar </button>
+    </form>
+    <a href="/">
+        <div class="containerIcon"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+    </a>
+</body>
+</html>
