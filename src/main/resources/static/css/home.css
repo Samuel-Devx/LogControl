@@ -60,11 +60,10 @@ button:hover{
   cursor: pointer;
 }
 
-a{
+a {
   text-decoration: none;
-  width: 2em;
+   width: 1px;
 }
-
 .blockProdutos{
    background-color:  var(--cor-primaria);
   padding: 3em;
@@ -181,6 +180,7 @@ table {
   margin: auto;
   
 }
+
 .containerResult h2{
   margin: 6em 0 2em 0;
 }
