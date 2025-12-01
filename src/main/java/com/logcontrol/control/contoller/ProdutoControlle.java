@@ -23,8 +23,8 @@ public class ProdutoControlle {
     ProdutoRepository produtoRepository;
 
     @PostMapping("/cadastrar-produto")
-    public String cadastrar(String nome, Double preco, Integer quantidade, String SKU, Model model){
-        String erro = produtoService.salvar(nome, preco, quantidade, SKU);
+    public String cadastrar(String nome, Double preco, Integer quantidade, String sku, Model model){
+        String erro = produtoService.salvar(nome, preco, quantidade, sku);
 
         if (erro != null) {
             model.addAttribute("erro", erro);

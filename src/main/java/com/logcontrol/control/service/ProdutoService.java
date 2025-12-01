@@ -16,8 +16,8 @@ public class ProdutoService {
     }
 
 
-    public String salvar (String nome, Double preco, Integer qantidade, String SKU){
-        Produto produto = new Produto(nome,preco, qantidade, SKU);
+    public String salvar (String nome, Double preco, Integer qantidade, String sku){
+        Produto produto = new Produto(nome,preco, qantidade, sku);
         String erro = produto.validar();
 
         if(erro != null){

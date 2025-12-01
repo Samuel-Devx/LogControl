@@ -28,7 +28,7 @@ public class Produto {
         this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
-        sku = sku;
+        this.sku = sku;
     }
     public String validar() {
         if (nome == null || nome.trim().isEmpty()) {
