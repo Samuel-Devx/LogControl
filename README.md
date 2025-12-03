@@ -11,7 +11,7 @@ Meu projeto usando a FrameWork do Java, Spring Boot, utilizando para fazer o Bac
 Funcionalidades
 
 -  Cadastro de Produtos
--  Conslta de Produtos 
+-  Consulta de Produtos 
 -  Pesquisa de produtos
 -  Integração com banco de dados MySQL
 -  Uso de variáveis de ambiente (segurança das credenciais)
