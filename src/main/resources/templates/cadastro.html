@@ -11,37 +11,30 @@
     <div class="blockProdutos"> 
         <h1 class="tlCadastro">Cadastro de produtos</h1>
         <form action="/cadastrar-produto" method="post">
-            <div class="continerLabel">
-                <label>Nome:</label>
+
+                <p class="textCadastro">Nome*</p>
                 <input type="text" name="nome" placeholder="Digite o nome..." required>
-            </div><br>
-            
-            <div class="continerLabel"> 
-                <label>Preço:</label>
+        
+                <p class="textCadastro">Preço*</p>
                 <input type="number" step= 0.1 name="preco" placeholder="Digite o preço..." required>
-        </div><br>
-           
-            <div class="continerLabel">
-                <label>Quantidade:</label>
+        
+                <p class="textCadastro">Quantidade*</p>
                 <input type="number" min="1" step="1" name="quantidade" placeholder="Digite a Quantidade..." required>
-            </div>
-            <br>
-
-            <div class="continerLabel">
-                <label>SKU:</label>
+            
+                <p class="textCadastro">SKU*</p>
                 <input type="text" name="sku" placeholder="Digite o SKU..." required><br>
-            </div>
+          
 
-            <button type="submit" class="buttonCadastra">Cadastrar</button>
+                <div class="containerConsulta">
+                    <button class="cadastroBT" type="submit">Cadastrar</button>
+                    <button class="voltar"><a href="/" class="link">Voltar</a></button>
+                </div>
 
         </form>
         
         <p th:if="${mensagem}" th:text="${mensagem}" class="sucesso"></p>
         <p th:if="${erro}" th:text="${erro}" class="erro"></p>
     </div>
-    <a href="/">
-        <div class="containerIcon"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
-    </a>
-
+    
 </body>
 </html>

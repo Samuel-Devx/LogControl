@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Birthstone&family=Charmonman:wght@400;700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fascinate&family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kiwi+Maru&family=Passion+One:wght@400;700;900&family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
 *{ 
     padding: 0;
     margin: 0;
@@ -20,6 +21,8 @@
   --cor-status-info: #17A2B8;     
  
   --gradiente-primario: linear-gradient(135deg, var(--cor-primaria) #2c5a7d);
+
+  --font-titulo: "Roboto Condensed", sans-serif;
 }
 body{
     background-color: var(--cor-fundo-secundario);
@@ -64,15 +67,20 @@ a {
   text-decoration: none;
    width: 1px;
 }
+
+.link {
+  text-decoration: none;
+   width: 1px;
+   color: white;
+}
 .blockProdutos{
-   background-color:  var(--cor-primaria);
-  padding: 3em;
-  width: 30em;
-  margin: 15em auto 5em auto;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  grid-row: 1fr 1fr;
+    display: grid;
+    background-color: var(--cor-primaria);
+    padding: 3em;
+    width: 30em;
+    margin: 10em auto;
+    align-items: center; 
+    border-radius: 15px;
 }
 
 .tlCadastro{
@@ -81,14 +89,13 @@ a {
 }
 
 input {
-  background-color: #c0bfbf;
-  border: none;
-  height: 2em;
-  border-radius: 4px;
-  width: 20em;
-  margin-left: auto;
-  padding: 10px;
-} 
+    border: 1px gray solid;
+    border-radius: 4px;
+    padding: 0.5em;
+    width: 28em;
+}
+
+
 
 label {
     flex-basis: 120px; 
@@ -125,20 +132,43 @@ input[type=number] {
 }
 
 
-.tableBlock{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    margin-top: 10em;
-}
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse; 
-  padding: 8px;
+
+.cadastroBT{
+    padding: 0.4em;
+    display: block;
+    width: 9em;
+    margin:  2em 1em 0 auto;
+    background-color: rgb(2, 107, 112);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.5s ease;
 }
 
-table {
-  width: 20em;
+.cadastro:hover{
+    background: rgb(116, 116, 116);
+    color: black;
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+
+
+.Pesquisa{
+    padding: 0.3em;
+    width: 5em;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.Pesquisa:hover{
+     background: rgb(88, 88, 88);
+    color: black;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .containerIcon{
@@ -161,12 +191,11 @@ table {
 
 #sku-produto{
   display: block;
-  margin: 10em auto 1em auto;
+  margin: 0 auto 1em auto;
 }
 #deletarProduto{
   display: block;
-  margin: 2em auto 1em auto;
-
+  margin: 0 auto 1em auto;
 }
 
 .tlDelet{
@@ -191,3 +220,256 @@ table {
   margin-top: 5em;
   margin-bottom: 5em;
 }
+
+.Pesquisa{
+    padding: 0.3em;
+    width: 5em;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  
+}
+
+.Pesquisa:hover{
+     background: rgb(88, 88, 88);
+    color: black;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.gridContainer {
+    margin-top: 1em;
+    overflow-x: auto;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+th {
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+     text-align: center;
+}
+
+td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee; 
+    white-space: nowrap; 
+    text-align: center;
+}
+
+
+tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+h1{
+    text-align: center;
+    font-family: var(--font-titulo);
+    margin: 1em 0 4em 0;
+}
+
+.cadastro{
+    padding: 0.4em;
+    display: block;
+    width: 9em;
+    margin:  2em 3em 0 auto;
+    background-color: rgb(2, 107, 112);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+
+.cadastro:hover{
+    background: rgb(116, 116, 116);
+    color: black;
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+
+
+.Pesquisa{
+    display: flex;
+    align-items: center;
+    padding: 0.3em;
+    width: 5em;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.Pesquisa:hover{
+     background: rgb(88, 88, 88);
+    color: black;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.voltar{
+    margin: 2em 1em 0 0;
+    padding: 0.3em;
+    width: 5em;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    height: 2em;
+}
+
+.voltar:hover{
+    background: rgb(158, 158, 158);
+    color: black;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.containerConsulta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textCadastro{
+     margin-bottom: 0.5em;
+     margin-top: 0.3em;
+     font-weight: bolder;
+}
+
+.containerBotão{
+  display: flex;
+
+}
+
+.Btpesquisa{
+   margin: 0 0 0 auto;
+    padding: 0.3em;
+    width: 5em;
+    background-color: var(--cor-secundaria);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    height: 2em;
+}
+
+.containerBusca{
+    display: flex;
+    align-items: center;
+    padding: 10em;
+    height: 10em;
+    width: 15em;
+  }
+
+  .buttonPesquisa{
+    display: flex;
+
+  }
+
+  .voltarBusca{
+    margin: 0 40em 0 1em;
+    padding: 0.3em;
+    width: 5em;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    height: 2em;
+  }
+
+
+  .Btdelete{
+    margin: 0 0 0 auto;
+    padding: 0.3em;
+    width: 5em;
+    background-color: var(--cor-status-erro);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    height: 2em;
+  }
+  .Btdelete:hover{
+  
+    background-color: rgb(83, 83, 83);
+    color: black;
+  }
+   .Btdelete2{
+    margin: 2em auto 1em auto;
+    padding: 0.3em;
+    width: 10em;
+    background-color: var(--cor-status-erro);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    height: 2em;
+  }
+  .Btdelete2:hover{
+  
+    background-color: rgb(83, 83, 83);
+    color: black;
+  }
+  
+  
+  .BtpesquisaResult{
+      margin: 2em 2em 0 auto;
+    padding: 0.3em;
+    width: 9em;
+    background-color: var(--cor-secundaria);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    height: 2em;
+  }
+
+  .textPesquisa{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 33.5em;
+    margin-bottom: 0.3em;
+    margin-top: 10em;
+    font-weight: bolder;
+  }
+
+  .textDelete{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 33.5em;
+    margin-bottom: 0.3em;
+    margin-top: 10em;
+    font-weight: bolder;
+  }
+  
+.BTmoderno{
+    margin: 0 auto 0 auto;
+    padding: 0.3em;
+    width: 10em;
+    background-color: var(--cor-secundaria);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    height: 2em;
+}
+
+  .Btmoderno:hover{
+  
+    background-color: rgb(83, 83, 83);
+    color: black;
+  }

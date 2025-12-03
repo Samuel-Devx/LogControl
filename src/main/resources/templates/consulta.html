@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br"  xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta Produtos</title>
     <link rel="stylesheet" th:href="@{/css/home.css}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="tableBlock">
-        <h1 class="tlConsulta">Consulta</h1>
-            <table>
-                <thead>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Preço</th>
-                    <th>Quantidade</th>
-                    <th>SKU</th>
-                </thead>
-                <tbody>
-                    <tr th:each="p : ${produtos}">
+    <h1>Consulta Produto</h1>
+   
+    <div class="gridContainer">
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Nome</td>
+                    <td>Quantidade</td>
+                    <td>Preço</td>
+                    <td>Sku</td>
+                    <td>Pesquisa</td>
+                </tr>
+            </thead>
+            <tbody>
+                  <tr th:each="p : ${produtos}">
                         <td th:text="${p.id}"></td>
                         <td th:text="${p.nome}"></td>
                         <td th:text="${p.preco}"></td>
                         <td th:text="${p.quantidade}"></td>
                         <td th:text="${p.Sku}"></td>
+                        <td><button class="Pesquisa"><a th:href="@{/buscaSku(sku=${p.Sku})}" class="link">Pesquisar</a></button></td>
                     </tr>
-                </tbody>
-            </table>
-    </div>
-    <a href="/">
-        <div class="containerIcon"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
-    </a>
-</body>  
+            </tbody>
+        </table>
+    </div>      
+     <div class="containerConsulta">
+         <button class="cadastroBT"><a href="/produto/form" class="link">Cadastrar Produto</a></button>
+             <button class="voltar"><a href="/" class="link">Voltar</a></button>
+     </div>
+</body>
 </html>

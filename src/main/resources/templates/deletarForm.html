@@ -9,12 +9,12 @@
 <body>
     <h1 class="tlDelet">Deletar Produto</h1>
     <form th:action="@{/deletarSku}" method="post">
+        <p class="textDelete">Digite SKU</p>
         <input type="text" id="deletarProduto" name="sku" required placeholder="Digite o SKU do produto..." >
-        <button type="submit">
-             <i class="fa-solid fa-trash"></i> Deletar </button>
+         <div class="buttonPesquisa">
+                    <button type="submit" class="Btdelete">Deletar</button>
+                    <button class="voltarBusca"><a href="/" class="link">Voltar</a></button>
+        </div>
     </form>
-    <a href="/">
-        <div class="containerIcon"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
-    </a>
 </body>
 </html>
